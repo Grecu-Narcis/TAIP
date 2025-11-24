@@ -12,7 +12,6 @@ public class DynamoDbConfig {
     @Bean
     public DynamoDbClient dynamoDbClient() {
         return DynamoDbClient.builder()
-                .credentialsProvider(ProfileCredentialsProvider.create("taip"))
                 .region(Region.EU_CENTRAL_1)
                 .build();
     }
