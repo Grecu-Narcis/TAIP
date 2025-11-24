@@ -1,0 +1,9 @@
+PUT http://localhost:8081/tasks/db87f8ea-3a96-488c-99c5-535a3141ca53
+Content-Type: application/json
+
+{
+  "name": "Write updated docs",
+  "description": "Documentation updated 2",
+  "completed": true,
+  "projectId": 42
+}

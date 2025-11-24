@@ -1,0 +1,8 @@
+POST http://localhost:8080/projects
+Content-Type: application/json
+
+{
+  "name": "New Website",
+  "description": "Develop a new marketing website",
+  "deadline": "2025-12-31"
+}

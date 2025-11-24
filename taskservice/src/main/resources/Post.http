@@ -1,0 +1,9 @@
+POST http://localhost:8081/tasks
+Content-Type: application/json
+
+{
+  "name": "Write documentation 2",
+  "description": "Prepare API docs for the new feature",
+  "completed": false,
+  "projectId": "ff7bf134-1483-49c8-9af8-d4dc60c80983"
+}
