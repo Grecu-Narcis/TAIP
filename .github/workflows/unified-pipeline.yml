@@ -48,6 +48,10 @@ jobs:
           mvn -f ProjectService/pom.xml clean package -DskipTests=false
           mvn -f reportservice/pom.xml clean package -DskipTests=false
 
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v2
+        id: login-ecr
+
       # --- STEP 2: BUILD & PUSH DOCKER IMAGES ---
       - name: Build & Push TaskService
         run: |
