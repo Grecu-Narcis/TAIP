@@ -1,1 +1,2 @@
-GET http://localhost:8080/tasks/2817fd7d-1613-46e9-b58f-be792a5a7c19
+GET
+    http://aaccb8ee0a57f4451bacea0f123731c4-432690050.eu-central-1.elb.amazonaws.com/tasks/2817fd7d-1613-46e9-b58f-be792a5a7c19

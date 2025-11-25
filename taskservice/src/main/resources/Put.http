@@ -1,4 +1,5 @@
-PUT http://localhost:8081/tasks/db87f8ea-3a96-488c-99c5-535a3141ca53
+PUT
+    http://aaccb8ee0a57f4451bacea0f123731c4-432690050.eu-central-1.elb.amazonaws.com/tasks/2817fd7d-1613-46e9-b58f-be792a5a7c19
 Content-Type: application/json
 
 {

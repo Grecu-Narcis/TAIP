@@ -8,7 +8,7 @@ on:
 
 env:
   AWS_REGION: eu-central-1
-  # Note: Ensure this secret exists in GitHub Settings
+
   ECR_REGISTRY: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.eu-central-1.amazonaws.com
   EKS_CLUSTER_NAME: taip-cluster
 
@@ -37,7 +37,6 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
       # --- STEP 1: COMPILE JARS ---
-      # We build all JARs first to fail fast if there is a compilation error
       - name: Maven Build All Services
         run: |
           mvn -f taskservice/pom.xml clean package -DskipTests=false
