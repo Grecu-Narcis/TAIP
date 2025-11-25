@@ -34,4 +34,15 @@ public class CachingAspect {
         System.out.println(cache);
         return result;
     }
+
+    @Around("@annotation(com.taip.taskservice.config.CacheEvict)")
+    public Object evictCache(ProceedingJoinPoint jointPoint) throws Throwable {
+        String key = (String) jointPoint.getArgs()[0];
+
+        cache.evict(key);
+
+        System.out.println("Cache evicted for task with id: " + key);
+
+        return jointPoint.proceed();
+    }
 }

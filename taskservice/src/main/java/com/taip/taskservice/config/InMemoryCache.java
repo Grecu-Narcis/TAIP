@@ -17,6 +17,10 @@ public class InMemoryCache {
         cache.put(key, value);
     }
 
+    public void evict(String key) {
+        cache.remove(key);
+    }
+
     @Override
     public String toString() {
         return cache.toString();

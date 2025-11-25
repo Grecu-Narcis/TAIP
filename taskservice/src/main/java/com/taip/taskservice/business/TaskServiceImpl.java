@@ -1,6 +1,7 @@
 package com.taip.taskservice.business;
 
 import com.taip.taskservice.config.Cacheable;
+import com.taip.taskservice.config.CacheEvict;
 import com.taip.taskservice.model.Task;
 import com.taip.taskservice.repository.TaskRepository;
 import org.springframework.stereotype.Service;
@@ -32,6 +33,7 @@ public class TaskServiceImpl implements TaskService {
         return taskRepository.findById(id);
     }
 
+    @CacheEvict
     @Override
     public Task updateTask(String id, Task task) {
         if (id == null) {
