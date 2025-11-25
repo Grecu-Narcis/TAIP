@@ -1,5 +1,6 @@
 package com.taip.taskservice.business;
 
+import com.taip.taskservice.config.Cacheable;
 import com.taip.taskservice.model.Task;
 import com.taip.taskservice.repository.TaskRepository;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,7 @@ public class TaskServiceImpl implements TaskService {
         return taskRepository.save(task);
     }
 
+    @Cacheable
     @Override
     public Task getTask(String id) {
         if (id == null) {
